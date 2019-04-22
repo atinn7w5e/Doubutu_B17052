@@ -1,5 +1,6 @@
 class KomaList {
   AbstractKoma[] komaArray = new AbstractKoma[10];
+   
 
   KomaList() {
     komaArray[0] = new Hiyoko("hiyoko", 2, 1, 0, true);
@@ -13,8 +14,13 @@ class KomaList {
     komaArray[8] = new Niwatori("niwatori", 0, 0, 0, false);
     komaArray[9] = new Niwatori("niwatori", 5, 0, 1, false);
   }
-  
-  
+void draw() {
+    for (AbstractKoma k : komaArray) {
+      k.draw();
+    }
+  }
+}
+
   
   AbstractKoma getSelectedKoma() {
     for (AbstractKoma k : komaArray) {
@@ -39,4 +45,3 @@ class KomaList {
       k.draw();
     }
   }
-}
