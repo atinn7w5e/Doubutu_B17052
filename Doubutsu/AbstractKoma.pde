@@ -24,12 +24,6 @@ abstract class AbstractKoma {
 
     if (this.kStat.selected) this.drawSelected();
   }
-
-  void drawSelected() {
-    fill(#FF0000, SQUARESIZE);
-    rect(this.x*SQUARESIZE, this.y*SQUARESIZE, SQUARESIZE, SQUARESIZE);
-  }
-
   void move(int toX, int toY) {
     this.updatePos(toX, toY);
   }
@@ -37,5 +31,10 @@ abstract class AbstractKoma {
     this.x=toX;
     this.y=toY;
     gs.turn = (gs.turn+1)%2;
+  }
+
+  void drawSelected() {
+    fill(#FF0000, SQUARESIZE);
+    rect(this.x*SQUARESIZE, this.y*SQUARESIZE, SQUARESIZE, SQUARESIZE);
   }
 }
